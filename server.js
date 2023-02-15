@@ -29,12 +29,15 @@ app.get("/", (req, res) => {
 app.post("/audio", upload.single("file"), (req, res) => {
     const fileName = req.file.originalname;
 
-    const key = generateKey(fileName);
     // console.log()
+    const key = generateKey(fileName);
 
-    const fileNameDB = db[key];
+    if(db[key]) {
+      res.render("audio", { path: db[key] });
+    } else {
+      res.send('audio file is not save in database')
+    }
 
-  res.render("audio", { path: fileNameDB });
 });
 
 app.listen(3000, function () {
