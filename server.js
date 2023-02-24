@@ -29,9 +29,7 @@ app.get("/", (req, res) => {
 app.post("/audio", upload.single("file"), (req, res) => {
     const fileName = req.file.originalname;
 
-    // console.log()
     const key = generateKey(fileName);
-    console.log(key);
     if(db[key]) {
       res.render("audio", { path: db[key] });
     } else {
