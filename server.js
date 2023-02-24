@@ -31,11 +31,11 @@ app.post("/audio", upload.single("file"), (req, res) => {
 
     // console.log()
     const key = generateKey(fileName);
-
+    console.log(key);
     if(db[key]) {
       res.render("audio", { path: db[key] });
     } else {
-      res.send('audio file is not save in database')
+      res.send('audio file is not saved in database')
     }
 
 });
