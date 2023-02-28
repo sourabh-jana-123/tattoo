@@ -1,7 +1,0 @@
-exports.db = {
-    "2837c88f584f67be5b1647c2958c0db60ff8df5bef7317df250d9092548d9613" : "audio1.mp3",
-    "895ec974435e9ea04585848f4e9ea7371dcca93e7a3c2913f8be69a7dda58ce9" : "audio2.mp3",
-    "a3115be0034bd0bcee06d3c8b8dcff62f5c838ec2bf374abf8d96dda019652f3" : "audio3.mp3",
-    "404c7c1a7452dbbb8afea33a8e3b97919890070ef5c77ff02497061f994c8f05" : "audio4.mp3",
-    "5f0cd34ebd40b507348c8f16767117355cdc7cba2f204afc25065c59be58ef4a" : "audio5.mp3"
-}
