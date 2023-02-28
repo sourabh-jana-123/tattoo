@@ -2,6 +2,7 @@ const { spawnSync } = require('child_process');
 const express = require("express");
 const cors = require("cors");
 const multer = require("multer");
+const {base64ToImg} = require('./base64_to_img')
 
 const app = express();
 app.use(cors());
@@ -28,8 +29,7 @@ app.get("/", (req, res) => {
 app.post("/audio", upload.single("file"), async (req, res) => {
 
   try {
-    const fileName = req.file.originalname;
-
+    base64ToImg()
     const result = spawnSync('python3', ['./main.py']);
 
     if (result.error) {

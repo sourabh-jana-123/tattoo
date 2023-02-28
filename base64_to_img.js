@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 exports.base64ToImg = () => {
-    const filePath1 = './koshal_sir_imgs/img1.jpeg';
+    const filePath1 = './uploads/new.png';
     const data = fs.readFileSync(filePath1);
     const base64Data1 = data.toString('base64');
 
